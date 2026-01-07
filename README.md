@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎴 Interactive 3D Resume
 
-## Getting Started
+A stunning, physics-based 3D interactive resume built with Next.js 16, React Three Fiber, and Rapier physics. Features a draggable badge card suspended by a lanyard with realistic physics simulation.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)
+![Three.js](https://img.shields.io/badge/Three.js-0.182-black?style=flat-square&logo=three.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+
+## ✨ Features
+
+- **🎮 Interactive 3D Badge** - Drag and throw the badge card with realistic physics
+- **⚡ Rope Physics** - Lanyard simulation using Rapier physics engine
+- **🌊 Smooth Animations** - Framer Motion powered transitions
+- **🌙 Dark Theme** - Sleek black aesthetic with subtle lighting
+- **📱 Responsive Design** - Works seamlessly on desktop and mobile
+- **🎨 Custom Badge** - Personalized card with photo and details
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| [Next.js 16](https://nextjs.org/) | React framework |
+| [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) | React renderer for Three.js |
+| [@react-three/drei](https://github.com/pmndrs/drei) | Useful helpers for R3F |
+| [@react-three/rapier](https://github.com/pmndrs/react-three-rapier) | Physics engine |
+| [Framer Motion](https://www.framer.com/motion/) | Animations |
+| [MeshLine](https://github.com/spite/THREE.MeshLine) | Lanyard rendering |
+| [Tailwind CSS](https://tailwindcss.com/) | Styling |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/unknownking07/resume.git
+
+# Navigate to the project
+cd resume
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+resume/
+├── public/
+│   └── assets/
+│       ├── 3d/          # GLTF 3D models
+│       └── images/      # Textures and badge images
+├── src/
+│   ├── app/
+│   │   ├── page.tsx     # Main page with Canvas
+│   │   ├── layout.tsx   # Root layout
+│   │   └── globals.css  # Global styles
+│   ├── components/
+│   │   ├── canvas/
+│   │   │   └── Band.tsx # 3D badge and physics
+│   │   └── dom/
+│   │       └── Overlay.tsx # UI overlay
+│   └── types/
+│       └── three.d.ts   # TypeScript declarations
+└── package.json
+```
 
-## Learn More
+## 🎯 Usage
 
-To learn more about Next.js, take a look at the following resources:
+- **Drag** the badge card to move it around
+- **Throw** it to see realistic physics in action
+- **Watch** the lanyard follow with rope physics
+- Click social links to connect
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚢 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deploy on Vercel
 
-## Deploy on Vercel
+The easiest way to deploy is with [Vercel](https://vercel.com):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/unknownking07/resume)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Or deploy manually:
+
+```bash
+npm run build
+```
+
+## 📝 Customization
+
+### Update Personal Info
+
+Edit `src/components/dom/Overlay.tsx` to change:
+- Name and tagline
+- Bio description  
+- Social media links
+
+### Update Badge
+
+Replace images in `public/assets/images/`:
+- `custom_badge.png` - Badge face design
+- `tag_texture.png` - Lanyard texture
+
+## 📄 License
+
+MIT © [Abhinav](https://github.com/unknownking07)
+
+---
+
+<p align="center">
+  <b>Built with ☕ and physics</b><br>
+  <a href="https://x.com/defiunknownking">X</a> • 
+  <a href="https://t.me/unknownking7">Telegram</a> • 
+  <a href="https://www.linkedin.com/in/abhinavk7/">LinkedIn</a>
+</p>
