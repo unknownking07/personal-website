@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { useFrame, extend, ThreeElement } from "@react-three/fiber";
 import { useGLTF, useTexture, Text, RenderTexture, PerspectiveCamera } from "@react-three/drei";
 import {
@@ -51,6 +51,40 @@ export default function Band({ maxSpeed = 50, minSpeed = 10 }) {
     const cardTexture = useTexture("/assets/images/custom_badge.png");
 
     // No texture transformation needed - we'll rotate the mesh instead
+
+    // Create rounded rectangle geometry for card overlay
+    const roundedRectGeometry = useMemo(() => {
+        const width = 0.77;
+        const height = 1.08;
+        const radius = 0.04; // Corner radius
+
+        const shape = new THREE.Shape();
+        const x = -width / 2;
+        const y = -height / 2;
+
+        shape.moveTo(x + radius, y);
+        shape.lineTo(x + width - radius, y);
+        shape.quadraticCurveTo(x + width, y, x + width, y + radius);
+        shape.lineTo(x + width, y + height - radius);
+        shape.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        shape.lineTo(x + radius, y + height);
+        shape.quadraticCurveTo(x, y + height, x, y + height - radius);
+        shape.lineTo(x, y + radius);
+        shape.quadraticCurveTo(x, y, x + radius, y);
+
+        const geometry = new THREE.ShapeGeometry(shape);
+
+        // Generate proper UVs for the rounded rectangle
+        const pos = geometry.attributes.position;
+        const uvs = new Float32Array(pos.count * 2);
+        for (let i = 0; i < pos.count; i++) {
+            uvs[i * 2] = (pos.getX(i) + width / 2) / width;
+            uvs[i * 2 + 1] = (pos.getY(i) + height / 2) / height;
+        }
+        geometry.setAttribute('uv', new THREE.BufferAttribute(uvs, 2));
+
+        return geometry;
+    }, []);
 
     const [curve] = useState(
         () =>
@@ -189,11 +223,10 @@ export default function Band({ maxSpeed = 50, minSpeed = 10 }) {
                             />
                         </mesh>
                         {/* Custom overlay with photo and name - covers full card */}
-                        <mesh position={[0, 0.55, 0.015]}>
-                            <planeGeometry args={[0.72, 1.02]} />
+                        <mesh position={[0, 0.55, 0.016]} geometry={roundedRectGeometry}>
                             <meshBasicMaterial
                                 map={cardTexture}
-                                transparent={true}
+                                transparent={false}
                             />
                         </mesh>
                         <mesh
