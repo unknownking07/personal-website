@@ -9,10 +9,10 @@ export default function Overlay() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col md:flex-row justify-between items-start pointer-events-auto gap-8 md:gap-0"
+                className="flex flex-col md:flex-row justify-between items-start pointer-events-none gap-8 md:gap-0"
             >
                 {/* Hero text - left side */}
-                <div className="max-w-2xl">
+                <div className="max-w-2xl pointer-events-auto">
                     <h1 className="text-4xl md:text-5xl font-sans font-medium tracking-tight mb-2">
                         hi, i'm <span className="font-semibold">abhinav</span>
                     </h1>
@@ -77,7 +77,7 @@ export default function Overlay() {
                 </div>
 
                 {/* Social links - top right */}
-                <div className="flex gap-6 text-sm font-sans text-white/70">
+                <div className="flex gap-6 text-sm font-sans text-white/70 pointer-events-auto">
                     <a
                         href="https://x.com/defiunknownking"
                         target="_blank"
