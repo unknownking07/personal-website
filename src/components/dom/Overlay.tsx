@@ -33,10 +33,10 @@ export default function Overlay() {
 
                     <div className={`space-y-4 text-sm md:text-base ${mutedText} font-sans`}>
                         <p>
-                            i've been in the crypto space since 2020 — farming airdrops and working with various defi protocols as a community manager, moderator, and ambassador.
+                            I've been in the crypto space since 2020, farming airdrops and working with various DeFi protocols as a community manager, moderator, and ambassador.
                         </p>
                         <p>
-                            i'm currently focused on building my personal brand on X(twitter), learning the art of consistency through regular posting and networking to grow and improve.
+                            I'm currently focused on building my personal brand on X (Twitter), learning the art of consistency through regular posting and networking to grow and improve.
                         </p>
                     </div>
 
