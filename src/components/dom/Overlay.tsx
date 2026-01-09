@@ -28,6 +28,52 @@ export default function Overlay() {
                             i’m currently focused on building my personal brand on X(twitter), learning the art of consistency through regular posting and networking to grow and improve.
                         </p>
                     </div>
+
+                    {/* Experience Section */}
+                    <div className="mt-8">
+                        <h2 className="text-lg md:text-xl font-semibold mb-4 text-white/80">Experience</h2>
+                        <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin">
+                            {/* Superboard */}
+                            <div className="border-l-2 border-white/20 pl-4 py-1">
+                                <h3 className="text-sm md:text-base font-medium text-white/90">Community Manager</h3>
+                                <p className="text-xs md:text-sm text-white/60">Superboard · Full-time</p>
+                                <p className="text-xs text-white/40">Apr 2025 - Jul 2025 · Remote</p>
+                                <p className="text-xs text-white/50 mt-1">Led the management and growth of the Superboard Discord community, enhancing engagement and user experience.</p>
+                            </div>
+
+                            {/* Ampleforth */}
+                            <div className="border-l-2 border-white/20 pl-4 py-1">
+                                <h3 className="text-sm md:text-base font-medium text-white/90">Ambassador</h3>
+                                <p className="text-xs md:text-sm text-white/60">Ampleforth · Part-time</p>
+                                <p className="text-xs text-white/40">Dec 2024 - Present · Remote</p>
+                                <p className="text-xs text-white/50 mt-1">Ampleforth is a cryptocurrency protocol designed to create a stable, non-collateralized digital asset called AMPL.</p>
+                            </div>
+
+                            {/* Asymmetry Finance */}
+                            <div className="border-l-2 border-white/20 pl-4 py-1">
+                                <h3 className="text-sm md:text-base font-medium text-white/90">Moderator</h3>
+                                <p className="text-xs md:text-sm text-white/60">Asymmetry Finance · Part-time</p>
+                                <p className="text-xs text-white/40">Nov 2024 - Present · Remote</p>
+                                <p className="text-xs text-white/50 mt-1">Asymmetry Finance is the ultimate staking & synthetic dollar protocol - Pioneering DeFi solutions.</p>
+                            </div>
+
+                            {/* Armor Wallet */}
+                            <div className="border-l-2 border-white/20 pl-4 py-1">
+                                <h3 className="text-sm md:text-base font-medium text-white/90">Community Manager</h3>
+                                <p className="text-xs md:text-sm text-white/60">Armor Wallet · Full-time</p>
+                                <p className="text-xs text-white/40">Dec 2024 · Remote</p>
+                                <p className="text-xs text-white/50 mt-1">Armor is a new generation of web3 wallets powered by artificial intelligence to bring a higher degree of control over investing.</p>
+                            </div>
+
+                            {/* MELD */}
+                            <div className="border-l-2 border-white/20 pl-4 py-1">
+                                <h3 className="text-sm md:text-base font-medium text-white/90">Community Manager</h3>
+                                <p className="text-xs md:text-sm text-white/60">MELD · Full-time</p>
+                                <p className="text-xs text-white/40">Jun 2021 - Nov 2024 · India</p>
+                                <p className="text-xs text-white/50 mt-1">The blockchain you can bank on. Built for speed with permanently low fees, empowered by DeFi. Helped and answered questions from MELD Global community on Telegram, Discord and Reddit.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Social links - top right */}
