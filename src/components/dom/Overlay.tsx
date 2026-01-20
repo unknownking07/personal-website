@@ -236,9 +236,45 @@ export default function Overlay() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="pointer-events-auto max-w-md"
+                className="pointer-events-auto w-full"
             >
-                <p className={`text-sm font-sans ${subtleText}`}>
+                {/* Mobile social links - shown only on mobile */}
+                <div className="md:hidden flex flex-wrap justify-center gap-3 mb-6">
+                    <a
+                        href="https://x.com/defiunknownking"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                    >
+                        𝕏 Twitter
+                    </a>
+                    <a
+                        href="https://t.me/unknownking7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                    >
+                        ✈️ Telegram
+                    </a>
+                    <a
+                        href="https://github.com/unknownking07"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                    >
+                        🐙 GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/abhinavk7/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                    >
+                        💼 LinkedIn
+                    </a>
+                </div>
+
+                <p className={`text-sm font-sans ${subtleText} text-center md:text-left`}>
                     mod @ <a href="https://asymmetry.finance" target="_blank" rel="noopener noreferrer" className={`${mutedText} hover:${textColor} transition-colors`}>Asymmetry Finance</a>
                 </p>
             </motion.div>

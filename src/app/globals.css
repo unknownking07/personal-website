@@ -15,6 +15,14 @@
   }
 }
 
+/* Mobile touch support - prevent default gestures on canvas */
+canvas {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Blue glow border effect - signature dakshie.com style */
 .glow-border {
   position: fixed;

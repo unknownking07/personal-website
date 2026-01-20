@@ -34,10 +34,10 @@ function MainContent() {
     >
       <Overlay />
       {/* Canvas container - positioned on right side */}
-      <div className="absolute right-0 top-0 h-screen w-full md:w-[50%]">
+      <div className="hidden md:block absolute right-0 top-0 h-screen w-full md:w-[50%]" style={{ touchAction: 'none' }}>
         <Canvas
           camera={{ position: [0, 0, 13], fov: 25 }}
-          style={{ backgroundColor: 'transparent' }}
+          style={{ backgroundColor: 'transparent', touchAction: 'none' }}
         >
           <ambientLight intensity={Math.PI} />
           <Physics

@@ -15,6 +15,12 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Abhinav | Community Architect",
   description: "Community Manager @ Asymmetry Finance",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
