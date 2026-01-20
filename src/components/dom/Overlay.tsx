@@ -42,46 +42,136 @@ export default function Overlay() {
 
                     {/* Experience Section */}
                     <div className="mt-8">
-                        <h2 className="text-lg md:text-xl font-semibold mb-4">Experience</h2>
-                        <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin">
+                        <h2 className="text-lg md:text-xl font-semibold mb-5 flex items-center gap-2">
+                            <span className="w-8 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+                            Experience
+                        </h2>
+                        <div className="space-y-3 max-h-[320px] overflow-y-auto pr-2 scrollbar-thin">
                             {/* Superboard */}
-                            <div className={`border-l-2 ${borderColor} pl-4 py-1`}>
-                                <h3 className="text-sm md:text-base font-medium">Community Manager</h3>
-                                <p className={`text-xs md:text-sm ${mutedText}`}>Superboard · Full-time</p>
-                                <p className={`text-xs ${subtleText}`}>Apr 2025 - Jul 2025 · Remote</p>
-                                <p className={`text-xs ${mutedText} mt-1`}>Led the management and growth of the Superboard Discord community, enhancing engagement and user experience.</p>
+                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
+                                ${theme === 'dark'
+                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
+                                hover:translate-x-1 hover:shadow-lg`}>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
+                                                Full-time
+                                            </span>
+                                            <span className={`text-[10px] ${subtleText}`}>Apr 2025 - Jul 2025</span>
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-blue-400 transition-colors">Community Manager</h3>
+                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Superboard</p>
+                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Led the management and growth of the Superboard Discord community, enhancing engagement and user experience.</p>
+                                    </div>
+                                </div>
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
 
                             {/* Ampleforth */}
-                            <div className={`border-l-2 ${borderColor} pl-4 py-1`}>
-                                <h3 className="text-sm md:text-base font-medium">Ambassador</h3>
-                                <p className={`text-xs md:text-sm ${mutedText}`}>Ampleforth · Part-time</p>
-                                <p className={`text-xs ${subtleText}`}>Dec 2024 - Present · Remote</p>
-                                <p className={`text-xs ${mutedText} mt-1`}>Ampleforth is a cryptocurrency protocol designed to create a stable, non-collateralized digital asset called AMPL.</p>
+                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
+                                ${theme === 'dark'
+                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
+                                hover:translate-x-1 hover:shadow-lg`}>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-blue-500/20 text-blue-300' : 'bg-blue-500/20 text-blue-700'}`}>
+                                                Part-time
+                                            </span>
+                                            <span className={`text-[10px] ${subtleText}`}>Dec 2024 - Present</span>
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium animate-pulse
+                                                ${theme === 'dark' ? 'bg-green-500/20 text-green-300' : 'bg-green-500/20 text-green-700'}`}>
+                                                Current
+                                            </span>
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-blue-400 transition-colors">Ambassador</h3>
+                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Ampleforth</p>
+                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Ampleforth is a cryptocurrency protocol designed to create a stable, non-collateralized digital asset called AMPL.</p>
+                                    </div>
+                                </div>
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
 
                             {/* Asymmetry Finance */}
-                            <div className={`border-l-2 ${borderColor} pl-4 py-1`}>
-                                <h3 className="text-sm md:text-base font-medium">Moderator</h3>
-                                <p className={`text-xs md:text-sm ${mutedText}`}>Asymmetry Finance · Part-time</p>
-                                <p className={`text-xs ${subtleText}`}>Nov 2024 - Present · Remote</p>
-                                <p className={`text-xs ${mutedText} mt-1`}>Asymmetry Finance is the ultimate staking & synthetic dollar protocol - Pioneering DeFi solutions.</p>
+                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
+                                ${theme === 'dark'
+                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
+                                hover:translate-x-1 hover:shadow-lg`}>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-blue-500/20 text-blue-300' : 'bg-blue-500/20 text-blue-700'}`}>
+                                                Part-time
+                                            </span>
+                                            <span className={`text-[10px] ${subtleText}`}>Nov 2024 - Present</span>
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium animate-pulse
+                                                ${theme === 'dark' ? 'bg-green-500/20 text-green-300' : 'bg-green-500/20 text-green-700'}`}>
+                                                Current
+                                            </span>
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-purple-400 transition-colors">Moderator</h3>
+                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Asymmetry Finance</p>
+                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Asymmetry Finance is the ultimate staking & synthetic dollar protocol - Pioneering DeFi solutions.</p>
+                                    </div>
+                                </div>
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
 
                             {/* Armor Wallet */}
-                            <div className={`border-l-2 ${borderColor} pl-4 py-1`}>
-                                <h3 className="text-sm md:text-base font-medium">Community Manager</h3>
-                                <p className={`text-xs md:text-sm ${mutedText}`}>Armor Wallet · Full-time</p>
-                                <p className={`text-xs ${subtleText}`}>Dec 2024 · Remote</p>
-                                <p className={`text-xs ${mutedText} mt-1`}>Armor is a new generation of web3 wallets powered by artificial intelligence to bring a higher degree of control over investing.</p>
+                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
+                                ${theme === 'dark'
+                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
+                                hover:translate-x-1 hover:shadow-lg`}>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
+                                                Full-time
+                                            </span>
+                                            <span className={`text-[10px] ${subtleText}`}>Dec 2024</span>
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-amber-400 transition-colors">Community Manager</h3>
+                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Armor Wallet</p>
+                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Armor is a new generation of web3 wallets powered by artificial intelligence to bring a higher degree of control over investing.</p>
+                                    </div>
+                                </div>
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-amber-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
 
                             {/* MELD */}
-                            <div className={`border-l-2 ${borderColor} pl-4 py-1`}>
-                                <h3 className="text-sm md:text-base font-medium">Community Manager</h3>
-                                <p className={`text-xs md:text-sm ${mutedText}`}>MELD · Full-time</p>
-                                <p className={`text-xs ${subtleText}`}>Jun 2021 - Nov 2024 · India</p>
-                                <p className={`text-xs ${mutedText} mt-1`}>The blockchain you can bank on. Built for speed with permanently low fees, empowered by DeFi. Helped and answered questions from MELD Global community on Telegram, Discord and Reddit.</p>
+                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
+                                ${theme === 'dark'
+                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
+                                hover:translate-x-1 hover:shadow-lg`}>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
+                                                Full-time
+                                            </span>
+                                            <span className={`text-[10px] ${subtleText}`}>Jun 2021 - Nov 2024</span>
+                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
+                                                ${theme === 'dark' ? 'bg-yellow-500/20 text-yellow-300' : 'bg-yellow-500/20 text-yellow-700'}`}>
+                                                3+ years
+                                            </span>
+                                        </div>
+                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-cyan-400 transition-colors">Community Manager</h3>
+                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>MELD</p>
+                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>The blockchain you can bank on. Built for speed with permanently low fees, empowered by DeFi. Helped and answered questions from MELD Global community on Telegram, Discord and Reddit.</p>
+                                    </div>
+                                </div>
+                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-cyan-400 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
                             </div>
                         </div>
                     </div>
