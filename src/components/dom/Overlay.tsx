@@ -31,11 +31,11 @@ export default function Overlay() {
                         I build communities in crypto.
                     </p>
 
-                    <div className={`space-y-2 md:space-y-4 text-xs md:text-base ${mutedText} font-sans hidden md:block`}>
-                        <p>
+                    <div className={`space-y-2 md:space-y-4 text-xs md:text-base ${mutedText} font-sans`}>
+                        <p className="hidden md:block">
                             I've been in the crypto space since 2020, farming airdrops and working with various DeFi protocols as a community manager, moderator, and ambassador.
                         </p>
-                        <p>
+                        <p className="hidden md:block">
                             I'm currently focused on building my personal brand on X (Twitter), learning the art of consistency through regular posting and networking to grow and improve.
                         </p>
                     </div>
@@ -54,7 +54,7 @@ export default function Overlay() {
 
                         {/* Bento Grid */}
                         <div className={`p-3 md:p-4 rounded-b-lg ${theme === 'dark' ? 'bg-zinc-900/80' : 'bg-zinc-100/80'} backdrop-blur-sm`}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 max-h-[200px] md:max-h-[320px] overflow-y-auto pr-1 scrollbar-thin">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 max-h-[45vh] md:max-h-[320px] overflow-y-auto pr-1 scrollbar-thin">
 
                                 {/* MELD - Large Featured Card */}
                                 <div className={`md:col-span-2 group relative overflow-hidden rounded-xl p-3 md:p-4 transition-all duration-300 cursor-default
@@ -168,8 +168,8 @@ export default function Overlay() {
                     </div>
                 </div>
 
-                {/* Theme toggle and Social links - top right */}
-                <div className="flex items-center gap-6 text-sm font-sans pointer-events-auto">
+                {/* Theme toggle and Social links - top right - HIDDEN on mobile */}
+                <div className="hidden md:flex items-center gap-6 text-sm font-sans pointer-events-auto">
                     {/* Theme Toggle Button */}
                     <button
                         onClick={toggleTheme}
