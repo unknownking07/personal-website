@@ -62,3 +62,134 @@ a,
 button {
   transition: color 0.2s ease, opacity 0.2s ease;
 }
+
+/* ============================================
+   Celestial Theme Transition Animations
+   ============================================ */
+
+/* Sky fade in */
+@keyframes skyFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Celestial body rise - fast and bouncy */
+@keyframes celestialRise {
+  0% {
+    transform: translateY(150px) scale(0.5);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Star twinkling effect */
+@keyframes starTwinkle {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+/* Stars appearing quickly */
+@keyframes starAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+/* Sun ray growing outward - fast */
+@keyframes rayGrow {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Light burst expanding */
+@keyframes lightBurst {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+/* Gentle pulse glow - faster */
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.9;
+  }
+}
+
+/* Fade animations */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}

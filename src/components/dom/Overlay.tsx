@@ -40,138 +40,129 @@ export default function Overlay() {
                         </p>
                     </div>
 
-                    {/* Experience Section */}
+                    {/* Experience Section - Terminal/Code Style Bento Grid */}
                     <div className="mt-8">
-                        <h2 className="text-lg md:text-xl font-semibold mb-5 flex items-center gap-2">
-                            <span className="w-8 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
-                            Experience
-                        </h2>
-                        <div className="space-y-3 max-h-[320px] overflow-y-auto pr-2 scrollbar-thin">
-                            {/* Superboard */}
-                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
-                                ${theme === 'dark'
-                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
-                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
-                                hover:translate-x-1 hover:shadow-lg`}>
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
-                                                Full-time
-                                            </span>
-                                            <span className={`text-[10px] ${subtleText}`}>Apr 2025 - Jul 2025</span>
+                        {/* Terminal Header */}
+                        <div className={`flex items-center gap-2 mb-0 px-3 py-2 rounded-t-lg ${theme === 'dark' ? 'bg-zinc-900' : 'bg-zinc-200'}`}>
+                            <div className="flex gap-1.5">
+                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span className={`text-xs font-mono ${subtleText} ml-2`}>~/abhinav/experience</span>
+                        </div>
+
+                        {/* Bento Grid */}
+                        <div className={`p-3 md:p-4 rounded-b-lg ${theme === 'dark' ? 'bg-zinc-900/80' : 'bg-zinc-100/80'} backdrop-blur-sm`}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 max-h-[280px] md:max-h-[320px] overflow-y-auto pr-1 scrollbar-thin">
+
+                                {/* MELD - Large Featured Card */}
+                                <div className={`md:col-span-2 group relative overflow-hidden rounded-xl p-3 md:p-4 transition-all duration-300 cursor-default
+                                    ${theme === 'dark'
+                                        ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 hover:border-cyan-400/50'
+                                        : 'bg-gradient-to-br from-cyan-500/5 to-blue-500/5 border border-cyan-500/30 hover:border-cyan-500/60'}`}>
+                                    <div className="flex items-start justify-between">
+                                        <div className="flex-1">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <span className={`font-mono text-xs ${theme === 'dark' ? 'text-cyan-400' : 'text-cyan-600'}`}>const</span>
+                                                <span className={`font-mono text-sm font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>meld</span>
+                                                <span className={`font-mono text-xs ${subtleText}`}>=</span>
+                                                <span className={`font-mono text-xs ${theme === 'dark' ? 'text-amber-400' : 'text-amber-600'}`}>{"{"}</span>
+                                            </div>
+                                            <div className="pl-4 space-y-1 font-mono text-[11px]">
+                                                <p><span className={`${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>role:</span> <span className={`${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>"Community Manager"</span></p>
+                                                <p><span className={`${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>duration:</span> <span className={`${theme === 'dark' ? 'text-orange-400' : 'text-orange-600'}`}>"3+ years"</span> <span className={`px-1.5 py-0.5 rounded text-[9px] font-bold ${theme === 'dark' ? 'bg-yellow-500/20 text-yellow-300' : 'bg-yellow-500/20 text-yellow-700'}`}>FEATURED</span></p>
+                                                <p><span className={`${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>period:</span> <span className={`${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>"Jun 2021 → Nov 2024"</span></p>
+                                                <p className={`${subtleText} mt-1`}>// The blockchain you can bank on</p>
+                                            </div>
+                                            <span className={`font-mono text-xs ${theme === 'dark' ? 'text-amber-400' : 'text-amber-600'}`}>{"}"}</span>
                                         </div>
-                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-blue-400 transition-colors">Community Manager</h3>
-                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Superboard</p>
-                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Led the management and growth of the Superboard Discord community, enhancing engagement and user experience.</p>
+
                                     </div>
+                                    {/* Animated line */}
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 w-0 group-hover:w-full transition-all duration-500"></div>
                                 </div>
-                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-emerald-400 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
+
+                                {/* Asymmetry Finance */}
+                                <div className={`group relative overflow-hidden rounded-xl p-3 transition-all duration-300 cursor-default
+                                    ${theme === 'dark'
+                                        ? 'bg-gradient-to-br from-sky-500/10 to-cyan-500/10 border border-sky-500/20 hover:border-sky-400/50'
+                                        : 'bg-gradient-to-br from-sky-500/5 to-cyan-500/5 border border-sky-500/30 hover:border-sky-500/60'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <div className="flex items-center gap-2">
+                                            <span className="relative flex h-2 w-2">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                            </span>
+                                            <span className={`text-[10px] font-mono ${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>ACTIVE</span>
+                                        </div>
+                                    </div>
+                                    <h3 className={`font-mono text-sm font-bold mb-1 ${theme === 'dark' ? 'text-sky-300' : 'text-sky-700'}`}>Asymmetry</h3>
+                                    <p className={`text-xs font-medium ${mutedText}`}>Moderator</p>
+                                    <p className={`text-[10px] ${subtleText} mt-1 font-mono`}>Nov 2024 → now</p>
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-sky-500 to-cyan-500 w-0 group-hover:w-full transition-all duration-500"></div>
+                                </div>
+
+                                {/* Ampleforth */}
+                                <div className={`group relative overflow-hidden rounded-xl p-3 transition-all duration-300 cursor-default
+                                    ${theme === 'dark'
+                                        ? 'bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 hover:border-blue-400/50'
+                                        : 'bg-gradient-to-br from-blue-500/5 to-indigo-500/5 border border-blue-500/30 hover:border-blue-500/60'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <div className="flex items-center gap-2">
+                                            <span className="relative flex h-2 w-2">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                            </span>
+                                            <span className={`text-[10px] font-mono ${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>ACTIVE</span>
+                                        </div>
+
+                                    </div>
+                                    <h3 className={`font-mono text-sm font-bold mb-1 ${theme === 'dark' ? 'text-blue-300' : 'text-blue-700'}`}>Ampleforth</h3>
+                                    <p className={`text-xs font-medium ${mutedText}`}>Ambassador</p>
+                                    <p className={`text-[10px] ${subtleText} mt-1 font-mono`}>Dec 2024 → now</p>
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-blue-500 to-indigo-500 w-0 group-hover:w-full transition-all duration-500"></div>
+                                </div>
+
+                                {/* Superboard */}
+                                <div className={`group relative overflow-hidden rounded-xl p-3 transition-all duration-300 cursor-default
+                                    ${theme === 'dark'
+                                        ? 'bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 hover:border-emerald-400/50'
+                                        : 'bg-gradient-to-br from-emerald-500/5 to-teal-500/5 border border-emerald-500/30 hover:border-emerald-500/60'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>FULL-TIME</span>
+
+                                    </div>
+                                    <h3 className={`font-mono text-sm font-bold mb-1 ${theme === 'dark' ? 'text-emerald-300' : 'text-emerald-700'}`}>Superboard</h3>
+                                    <p className={`text-xs font-medium ${mutedText}`}>Community Manager</p>
+                                    <p className={`text-[10px] ${subtleText} mt-1 font-mono`}>Apr → Jul 2025</p>
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-500 to-teal-500 w-0 group-hover:w-full transition-all duration-500"></div>
+                                </div>
+
+                                {/* Armor Wallet */}
+                                <div className={`group relative overflow-hidden rounded-xl p-3 transition-all duration-300 cursor-default
+                                    ${theme === 'dark'
+                                        ? 'bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 hover:border-amber-400/50'
+                                        : 'bg-gradient-to-br from-amber-500/5 to-orange-500/5 border border-amber-500/30 hover:border-amber-500/60'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${theme === 'dark' ? 'bg-amber-500/20 text-amber-300' : 'bg-amber-500/20 text-amber-700'}`}>FULL-TIME</span>
+
+                                    </div>
+                                    <h3 className={`font-mono text-sm font-bold mb-1 ${theme === 'dark' ? 'text-amber-300' : 'text-amber-700'}`}>Armor Wallet</h3>
+                                    <p className={`text-xs font-medium ${mutedText}`}>Community Manager</p>
+                                    <p className={`text-[10px] ${subtleText} mt-1 font-mono`}>Dec 2024</p>
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-amber-500 to-orange-500 w-0 group-hover:w-full transition-all duration-500"></div>
+                                </div>
                             </div>
 
-                            {/* Ampleforth */}
-                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
-                                ${theme === 'dark'
-                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
-                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
-                                hover:translate-x-1 hover:shadow-lg`}>
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-blue-500/20 text-blue-300' : 'bg-blue-500/20 text-blue-700'}`}>
-                                                Part-time
-                                            </span>
-                                            <span className={`text-[10px] ${subtleText}`}>Dec 2024 - Present</span>
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium animate-pulse
-                                                ${theme === 'dark' ? 'bg-green-500/20 text-green-300' : 'bg-green-500/20 text-green-700'}`}>
-                                                Current
-                                            </span>
-                                        </div>
-                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-blue-400 transition-colors">Ambassador</h3>
-                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Ampleforth</p>
-                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Ampleforth is a cryptocurrency protocol designed to create a stable, non-collateralized digital asset called AMPL.</p>
-                                    </div>
-                                </div>
-                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-blue-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-                            </div>
-
-                            {/* Asymmetry Finance */}
-                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
-                                ${theme === 'dark'
-                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
-                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
-                                hover:translate-x-1 hover:shadow-lg`}>
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-blue-500/20 text-blue-300' : 'bg-blue-500/20 text-blue-700'}`}>
-                                                Part-time
-                                            </span>
-                                            <span className={`text-[10px] ${subtleText}`}>Nov 2024 - Present</span>
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium animate-pulse
-                                                ${theme === 'dark' ? 'bg-green-500/20 text-green-300' : 'bg-green-500/20 text-green-700'}`}>
-                                                Current
-                                            </span>
-                                        </div>
-                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-purple-400 transition-colors">Moderator</h3>
-                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Asymmetry Finance</p>
-                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Asymmetry Finance is the ultimate staking & synthetic dollar protocol - Pioneering DeFi solutions.</p>
-                                    </div>
-                                </div>
-                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-purple-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-                            </div>
-
-                            {/* Armor Wallet */}
-                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
-                                ${theme === 'dark'
-                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
-                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
-                                hover:translate-x-1 hover:shadow-lg`}>
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
-                                                Full-time
-                                            </span>
-                                            <span className={`text-[10px] ${subtleText}`}>Dec 2024</span>
-                                        </div>
-                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-amber-400 transition-colors">Community Manager</h3>
-                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>Armor Wallet</p>
-                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>Armor is a new generation of web3 wallets powered by artificial intelligence to bring a higher degree of control over investing.</p>
-                                    </div>
-                                </div>
-                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-amber-400 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-                            </div>
-
-                            {/* MELD */}
-                            <div className={`group relative p-4 rounded-xl transition-all duration-300 cursor-default
-                                ${theme === 'dark'
-                                    ? 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
-                                    : 'bg-black/5 hover:bg-black/10 border border-black/10 hover:border-black/20'}
-                                hover:translate-x-1 hover:shadow-lg`}>
-                                <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-500/20 text-emerald-700'}`}>
-                                                Full-time
-                                            </span>
-                                            <span className={`text-[10px] ${subtleText}`}>Jun 2021 - Nov 2024</span>
-                                            <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium
-                                                ${theme === 'dark' ? 'bg-yellow-500/20 text-yellow-300' : 'bg-yellow-500/20 text-yellow-700'}`}>
-                                                3+ years
-                                            </span>
-                                        </div>
-                                        <h3 className="text-sm md:text-base font-semibold group-hover:text-cyan-400 transition-colors">Community Manager</h3>
-                                        <p className={`text-xs md:text-sm font-medium ${mutedText}`}>MELD</p>
-                                        <p className={`text-xs ${subtleText} mt-2 leading-relaxed`}>The blockchain you can bank on. Built for speed with permanently low fees, empowered by DeFi. Helped and answered questions from MELD Global community on Telegram, Discord and Reddit.</p>
-                                    </div>
-                                </div>
-                                <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-gradient-to-b from-cyan-400 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
+                            {/* Terminal prompt */}
+                            <div className={`mt-4 pt-3 border-t ${theme === 'dark' ? 'border-white/10' : 'border-black/10'}`}>
+                                <p className={`font-mono text-xs ${subtleText} flex items-center gap-2`}>
+                                    <span className={`${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>→</span>
+                                    <span className={`${theme === 'dark' ? 'text-cyan-400' : 'text-cyan-600'}`}>building communities since</span>
+                                    <span className={`${theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600'}`}>2020</span>
+                                    <span className="animate-pulse">▋</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -200,33 +191,45 @@ export default function Overlay() {
                         href="https://x.com/defiunknownking"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`link-underline transition-colors ${mutedText} hover:${textColor}`}
+                        className={`p-2 rounded-full transition-all duration-300 ${theme === 'dark' ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}
+                        aria-label="X (Twitter)"
                     >
-                        X
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                     </a>
                     <a
                         href="https://t.me/unknownking7"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`link-underline transition-colors ${mutedText} hover:${textColor}`}
+                        className={`p-2 rounded-full transition-all duration-300 ${theme === 'dark' ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}
+                        aria-label="Telegram"
                     >
-                        Telegram
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                        </svg>
                     </a>
                     <a
                         href="https://github.com/unknownking07"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`link-underline transition-colors ${mutedText} hover:${textColor}`}
+                        className={`p-2 rounded-full transition-all duration-300 ${theme === 'dark' ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}
+                        aria-label="GitHub"
                     >
-                        GitHub
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/abhinavk7/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`link-underline transition-colors ${mutedText} hover:${textColor}`}
+                        className={`p-2 rounded-full transition-all duration-300 ${theme === 'dark' ? 'hover:bg-white/10' : 'hover:bg-black/10'}`}
+                        aria-label="LinkedIn"
                     >
-                        LinkedIn
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </a>
                 </div>
             </motion.div>
@@ -239,38 +242,66 @@ export default function Overlay() {
                 className="pointer-events-auto w-full"
             >
                 {/* Mobile social links - shown only on mobile */}
-                <div className="md:hidden flex flex-wrap justify-center gap-3 mb-6">
+                <div className="md:hidden flex justify-center items-center gap-3 mb-6">
+                    {/* Theme Toggle Button - Mobile */}
+                    <button
+                        onClick={toggleTheme}
+                        className={`p-3 rounded-full transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        aria-label="Toggle theme"
+                    >
+                        {theme === 'dark' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                            </svg>
+                        )}
+                    </button>
                     <a
                         href="https://x.com/defiunknownking"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        className={`p-3 rounded-full transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        aria-label="X (Twitter)"
                     >
-                        𝕏 Twitter
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                     </a>
                     <a
                         href="https://t.me/unknownking7"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        className={`p-3 rounded-full transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        aria-label="Telegram"
                     >
-                        ✈️ Telegram
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                        </svg>
                     </a>
                     <a
                         href="https://github.com/unknownking07"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        className={`p-3 rounded-full transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        aria-label="GitHub"
                     >
-                        🐙 GitHub
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/abhinavk7/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        className={`p-3 rounded-full transition-all duration-300 border ${theme === 'dark' ? 'bg-white/10 hover:bg-white/20 text-white border-white/30' : 'bg-black/10 hover:bg-black/20 text-black border-black/30'}`}
+                        aria-label="LinkedIn"
                     >
-                        💼 LinkedIn
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </a>
                 </div>
 
