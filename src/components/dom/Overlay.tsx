@@ -13,7 +13,7 @@ export default function Overlay() {
     const borderColor = theme === 'dark' ? 'border-white/40' : 'border-black/50'
 
     return (
-        <div className={`absolute top-0 left-0 w-full h-full flex flex-col justify-between p-8 md:p-12 pointer-events-none ${textColor} z-10 selection:bg-blue-500 selection:text-white`}>
+        <div className={`absolute top-0 left-0 w-full h-full flex flex-col justify-between p-4 pb-6 md:p-12 pointer-events-none ${textColor} z-10 selection:bg-blue-500 selection:text-white overflow-y-auto`}>
 
             {/* Header */}
             <motion.div
@@ -24,14 +24,14 @@ export default function Overlay() {
             >
                 {/* Hero text - left side */}
                 <div className="max-w-2xl pointer-events-auto">
-                    <h1 className="text-4xl md:text-5xl font-sans font-medium tracking-tight mb-2">
+                    <h1 className="text-2xl md:text-5xl font-sans font-medium tracking-tight mb-1 md:mb-2">
                         hi, i'm <span className="font-semibold">abhinav</span>
                     </h1>
-                    <p className={`text-base md:text-lg ${mutedText} font-sans mb-8`}>
+                    <p className={`text-sm md:text-lg ${mutedText} font-sans mb-4 md:mb-8`}>
                         I build communities in crypto.
                     </p>
 
-                    <div className={`space-y-4 text-sm md:text-base ${mutedText} font-sans`}>
+                    <div className={`space-y-2 md:space-y-4 text-xs md:text-base ${mutedText} font-sans hidden md:block`}>
                         <p>
                             I've been in the crypto space since 2020, farming airdrops and working with various DeFi protocols as a community manager, moderator, and ambassador.
                         </p>
@@ -41,7 +41,7 @@ export default function Overlay() {
                     </div>
 
                     {/* Experience Section - Terminal/Code Style Bento Grid */}
-                    <div className="mt-8">
+                    <div className="mt-4 md:mt-8">
                         {/* Terminal Header */}
                         <div className={`flex items-center gap-2 mb-0 px-3 py-2 rounded-t-lg ${theme === 'dark' ? 'bg-zinc-900' : 'bg-zinc-200'}`}>
                             <div className="flex gap-1.5">
@@ -54,7 +54,7 @@ export default function Overlay() {
 
                         {/* Bento Grid */}
                         <div className={`p-3 md:p-4 rounded-b-lg ${theme === 'dark' ? 'bg-zinc-900/80' : 'bg-zinc-100/80'} backdrop-blur-sm`}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 max-h-[280px] md:max-h-[320px] overflow-y-auto pr-1 scrollbar-thin">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 max-h-[200px] md:max-h-[320px] overflow-y-auto pr-1 scrollbar-thin">
 
                                 {/* MELD - Large Featured Card */}
                                 <div className={`md:col-span-2 group relative overflow-hidden rounded-xl p-3 md:p-4 transition-all duration-300 cursor-default

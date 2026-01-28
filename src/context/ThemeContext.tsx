@@ -117,13 +117,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
                         </div>
                     )}
 
-                    {/* Moon for dark mode - positioned center-top for visibility */}
+                    {/* Moon for dark mode - positioned top right */}
                     {transitionDirection === 'to-dark' && (
                         <div
-                            className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0"
+                            className="absolute"
                             style={{
-                                top: '20%',
-                                right: undefined,
+                                top: '15%',
+                                right: '15%',
                                 animation: 'celestialRise 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
                             }}
                         >
@@ -157,13 +157,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
                         </div>
                     )}
 
-                    {/* Sun for light mode - positioned center-top for mobile visibility */}
+                    {/* Sun for light mode - positioned top right */}
                     {transitionDirection === 'to-light' && (
                         <div
-                            className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0"
+                            className="absolute"
                             style={{
-                                top: '20%',
-                                right: undefined,
+                                top: '15%',
+                                right: '15%',
                                 animation: 'celestialRise 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
                             }}
                         >
