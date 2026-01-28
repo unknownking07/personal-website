@@ -32,6 +32,16 @@ function MainContent() {
       className="relative min-h-screen w-full transition-colors duration-300 overflow-y-auto"
       style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
     >
+      {/* Blue glow border effect - visible on all screens */}
+      <div
+        className="fixed inset-0 pointer-events-none z-50"
+        style={{
+          boxShadow: theme === 'dark'
+            ? 'inset 0 0 80px rgba(59, 130, 246, 0.3), inset 0 0 160px rgba(59, 130, 246, 0.15), inset 0 0 240px rgba(59, 130, 246, 0.05)'
+            : 'inset 0 0 100px rgba(59, 130, 246, 0.25), inset 0 0 200px rgba(59, 130, 246, 0.1), inset 0 0 300px rgba(59, 130, 246, 0.05)',
+          border: theme === 'dark' ? '1px solid rgba(59, 130, 246, 0.2)' : '1px solid rgba(59, 130, 246, 0.15)'
+        }}
+      />
       <Overlay />
       {/* Canvas container - positioned on right side */}
       <div className="hidden md:block absolute right-0 top-0 h-screen w-full md:w-[50%]" style={{ touchAction: 'none' }}>
