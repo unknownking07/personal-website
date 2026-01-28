@@ -13,7 +13,7 @@ export default function Overlay() {
     const borderColor = theme === 'dark' ? 'border-white/40' : 'border-black/50'
 
     return (
-        <div className={`absolute top-0 left-0 w-full min-h-full flex flex-col p-4 pb-8 md:p-12 pointer-events-none ${textColor} z-10 selection:bg-blue-500 selection:text-white overflow-y-auto`}>
+        <div className={`absolute top-0 left-0 w-full min-h-full flex flex-col p-4 pb-8 md:p-12 pointer-events-auto md:pointer-events-none ${textColor} z-10 selection:bg-blue-500 selection:text-white overflow-y-auto`}>
 
             {/* Mobile Top Bar with Social Links */}
             <div className="md:hidden flex items-center justify-between mb-4 pointer-events-auto">

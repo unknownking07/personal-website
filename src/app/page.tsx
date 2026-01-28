@@ -29,7 +29,7 @@ function MainContent() {
 
   return (
     <div
-      className="relative h-screen w-full transition-colors duration-300"
+      className="relative min-h-screen w-full transition-colors duration-300 overflow-y-auto"
       style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
     >
       <Overlay />
