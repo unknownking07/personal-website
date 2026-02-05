@@ -13,6 +13,8 @@
     "@react-three/fiber": "^9.5.0",
     "@react-three/rapier": "^2.2.0",
     "@types/three": "^0.182.0",
+    "@upstash/redis": "^1.36.2",
+    "@vercel/blob": "^2.1.0",
     "framer-motion": "^12.23.26",
     "lamina": "^1.2.2",
     "meshline": "^3.3.1",

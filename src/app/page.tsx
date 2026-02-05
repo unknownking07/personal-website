@@ -30,7 +30,7 @@ function MainContent() {
   return (
     <div
       className="relative min-h-screen w-full transition-colors duration-300 overflow-y-auto"
-      style={{ backgroundColor: theme === 'dark' ? '#000000' : '#ffffff' }}
+      style={{ backgroundColor: theme === 'dark' ? '#000000' : '#faf9f7' }}
     >
       <Overlay />
       {/* Canvas container - positioned on right side */}
