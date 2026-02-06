@@ -343,7 +343,7 @@ function EditorContent() {
     }
 
     return (
-        <div className="min-h-screen overflow-y-auto" style={{ backgroundColor: bgColor }}>
+        <div className="h-screen overflow-auto" style={{ backgroundColor: bgColor }}>
             {/* Hidden file inputs */}
             <input ref={imageInputRef} type="file" accept="image/*" onChange={handleImageSelect} className="hidden" />
             <input ref={videoInputRef} type="file" accept="video/*" onChange={handleVideoSelect} className="hidden" />

@@ -189,7 +189,7 @@ function AdminDashboard({ theme, toggleTheme }: { theme: string; toggleTheme: ()
 
     return (
         <div
-            className="min-h-screen w-full transition-colors duration-300"
+            className="h-screen overflow-auto transition-colors duration-300"
             style={{ backgroundColor: theme === 'dark' ? '#000000' : '#faf9f7' }}
         >
             <div className={`max-w-4xl mx-auto p-6 md:p-12 ${textColor}`}>
