@@ -115,7 +115,7 @@ function BlogContent() {
                         blog
                     </h1>
                     <p className={`text-lg ${mutedText}`}>
-                        Thoughts on crypto, community building, and growth.
+                        Thoughts on crypto, community building, vibe coding, anime, and life.
                     </p>
                 </motion.div>
 
