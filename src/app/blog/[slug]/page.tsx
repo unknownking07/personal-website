@@ -68,6 +68,10 @@ function BlogPostContent() {
     // Simple markdown to HTML converter
     const renderContent = (content: string) => {
         let html = content
+            // Images (must be before links so ![alt](url) doesn't get consumed by link regex)
+            .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="max-w-full rounded-lg my-4 shadow-lg" loading="lazy" />')
+            // Videos
+            .replace(/<video([^>]*)src="([^"]*)"([^>]*)>/g, '<video$1src="$2"$3 class="max-w-full rounded-lg my-4" controls>')
             // Headers
             .replace(/^### (.*$)/gm, '<h3 class="text-xl font-semibold mt-6 mb-3">$1</h3>')
             .replace(/^## (.*$)/gm, '<h2 class="text-2xl font-semibold mt-8 mb-4">$1</h2>')
